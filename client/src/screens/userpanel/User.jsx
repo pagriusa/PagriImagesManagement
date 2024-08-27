@@ -17,7 +17,7 @@ export default function User() {
 
   const fetchUserData = async() => {
     try {
-      const response = await fetch('http://localhost:3001/api/getuserData');
+      const response = await fetch('https://pagriimagesmanagement.onrender.com/api/getuserData');
       const data = await response.json();
       setUserData(data);
     } catch (error) {
@@ -28,7 +28,7 @@ export default function User() {
    // Function to handle deleting a user
    const deleteUser = async (userId) => {
     try {
-      const response = await fetch(`http://localhost:3001/api//deleteUser/${userId}`, {
+      const response = await fetch(`https://pagriimagesmanagement.onrender.com/api//deleteUser/${userId}`, {
         method: 'DELETE',
       });
       if (response.ok) {
@@ -75,7 +75,7 @@ export default function User() {
     }
 
     try {
-      const response = await fetch('http://localhost:3001/api/addUser', {
+      const response = await fetch('https://pagriimagesmanagement.onrender.com/api/addUser', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

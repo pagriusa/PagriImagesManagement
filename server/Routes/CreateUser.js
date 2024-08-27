@@ -24,7 +24,7 @@ const cloudinary = require('cloudinary').v2;
 const upload = multer({ dest: 'uploads/' });
 const CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
 const CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
-const REDIRECT_URL = 'http://localhost:3001/api/oauth2callback'; // YOUR_REDIRECT_URL
+const REDIRECT_URL = 'https://pagriimagesmanagement.onrender.com/api/oauth2callback'; // YOUR_REDIRECT_URL
 
 console.log(CLIENT_ID, CLIENT_SECRET, "sddsdsdsds");
 

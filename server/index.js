@@ -17,7 +17,7 @@ app.use((req, res, next) => {
   const corsWhitelist = [
     "http://localhost:5173",
     "https://pagri.vercel.app",
-    // "https://invoice-sandy.vercel.app",
+    "https://pagri-theta.vercel.app/",
 ];
 if (corsWhitelist.indexOf(req.headers.origin) !== -1) {
     res.setHeader('Access-Control-Allow-Origin', req.headers.origin);

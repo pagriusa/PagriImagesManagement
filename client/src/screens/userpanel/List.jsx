@@ -24,7 +24,7 @@ const userRole = localStorage.getItem('userrole');
     console.log("Fetch Datad");
     try {
       // Fetch data from API based on user role
-      const response = await fetch(`http://localhost:3001/api/getsaveData?userid=${userId}&userrole=${userRole}`);
+      const response = await fetch(`https://pagriimagesmanagement.onrender.com/api/getsaveData?userid=${userId}&userrole=${userRole}`);
       const data = await response.json();
       console.log("Fetch Data");
       console.log(data,"Fetch Data 2" );
@@ -41,7 +41,7 @@ const userRole = localStorage.getItem('userrole');
   // Handle deleting an item
   const handleDelete = async (itemId) => {
     try {
-      const response = await fetch(`http://localhost:3001/api/deleteData/${itemId}`, {
+      const response = await fetch(`https://pagriimagesmanagement.onrender.com/api/deleteData/${itemId}`, {
         method: 'DELETE',
       });
 
@@ -58,7 +58,7 @@ const userRole = localStorage.getItem('userrole');
 
   // const handleDelete = async (id) => {
   //   try {
-  //     const response = await fetch(`http://localhost:3001/api/deleteData/${id}`, {
+  //     const response = await fetch(`https://pagriimagesmanagement.onrender.com/api/deleteData/${id}`, {
   //       method: 'DELETE',
   //     });
   //     if (response.ok) {
