@@ -14,6 +14,7 @@ export default function User() {
   });
 
   const [userData, setUserData] = useState([]);
+  const [Role, setRole] = useState('');
 
   const fetchUserData = async() => {
     try {
@@ -44,6 +45,15 @@ export default function User() {
 
 
   useEffect(() => {
+const getRole = localStorage.getItem('userrole');
+console.log(getRole, "getRole");
+setRole(getRole)
+
+if(getRole === 'user'){
+  alert('You Have not permission to add users!')
+  navigate('/userpanel/home')
+}
+
     fetchUserData();
   }, [])
   
